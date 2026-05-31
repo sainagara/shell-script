@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+
 
 ##### Special Vars #####
 echo "All variables passed to script: $@"
