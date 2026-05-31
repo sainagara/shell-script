@@ -7,7 +7,7 @@ read NUM
 
 RES=NUM%2
 
-if[$RES eq 0]; then
+if [$RES eq 0]; then
   echo "$NUM is Even Number"
 else
  echo "$Num is Odd Number"
