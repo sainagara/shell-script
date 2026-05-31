@@ -21,13 +21,13 @@ fi
  FLAG=0;
 
 # Handle numbers less than 2
-if [ $NUM1 -lt 2]; then
+if [ $NUM1 -lt 2 ]; then
    echo "$NUM1 is not prime number"
    exit 0
 if
 
 # Handle 2 separately - smallest prime number
-if [ $NUM1 -eq 2]; then
+if [ $NUM1 -eq 2 ]; then
    echo "$NUM1 is a prime number"
    exit 0
 if
