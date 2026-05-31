@@ -3,9 +3,9 @@ PERSON1="Sai"
 PERSON2="Mani"
 
 
-G=/e[32m
-Y=/e[33m
-N=/e{0m}
+G='/e[32m'
+Y='/e[33m'
+N='/e[0m'
 
 
 echo -e ":$G $PERSON1 Hey $Y $PERSON2,$N what are you doing tonight?"
