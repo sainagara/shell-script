@@ -9,5 +9,5 @@ echo "The Sume is: $SUM"
 
 NAMES=("sai" "mani" "Prabhkar" "Gopi" "Prasanna")
 
-echo "Names are: ${NAMES[$@]}"
+echo "Names are: ${NAMES[@]}"
 echo "First Name: ${NAMES[0]}"
