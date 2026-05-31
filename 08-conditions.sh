@@ -24,13 +24,13 @@ fi
 if [ $NUM1 -lt 2 ]; then
    echo "$NUM1 is not prime number"
    exit 0
-if
+fi
 
 # Handle 2 separately - smallest prime number
 if [ $NUM1 -eq 2 ]; then
    echo "$NUM1 is a prime number"
    exit 0
-if
+fi
 
 # Check divisibility from 2 to NUM1-1
 for i in $(seq 2 $(($NUM1-1))); do
