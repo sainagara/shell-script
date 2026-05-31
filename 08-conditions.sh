@@ -34,7 +34,7 @@ if
 
 # Check divisibility from 2 to NUM1-1
 for i in $(seq 2 $(($NUM1-1))); do
-        if[ $(($NUM 1 % $i)) -eq 0 ]; then
+        if[ $(($NUM1 % $i)) -eq 0 ]; then
             FLAG=1
             break
         fi
