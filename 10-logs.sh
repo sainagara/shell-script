@@ -5,6 +5,8 @@ USER_ID=$(id -u)
 LOGS_DIR="/var/logs/shell-script"
 LOGS_FILE="$LOGS_DIR/$0.log"
 
+mkdir -p $LOGS_DIR
+touch - LOGS_FILE
 
 if [ $USER_ID -ne 0 ]; then
    echo "Please run this script with root access"
