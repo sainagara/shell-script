@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-UISER_ID=$(id -u)
+USER_ID=$(id -u)
 LOGS_DIR="/var/logs/shell-script"
 LOGS_FILE="$LOGS_DIR/$0.log"
 
