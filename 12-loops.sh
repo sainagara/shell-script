@@ -34,8 +34,6 @@ dnf list installed $package &>> $LOGS_FILE
 
 if [ $? -eq 0 ]; then
   echo "$package is alredy installed...SKIPPING" | tee -a $LOGS_FILE
-  exit 0
-
 else
   echo "$package Installing "
   dnf install $package -y &>> $LOGS_FILE
