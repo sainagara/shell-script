@@ -42,7 +42,7 @@ if [ $? -eq 0 ]; then
 
 else
    echo "Installing nginx"
-   dnf installe nginx -y
+   dnf install nginx -y
    VALIDATE nginx $?
 
 fi
