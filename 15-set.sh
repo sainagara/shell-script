@@ -10,7 +10,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-trap 'echo "Error at $LineNO , connand:$BASH_COMMAND"' ERR
+trap 'echo "Error at $LINENO , connand:$BASH_COMMAND"' ERR
 
 # Check root access or not
 if [ $USERID -ne 0 ]; then
