@@ -30,7 +30,7 @@ fi
 
 TIME_STAMP=$(date "+%Y-%m-%d %H:%M:%S")
 ARCHIVE_FILE="$DEST_DIR/logs-archive-$TIME_STAMP.tar.gz"
-tar -czvf $ARCHIVE_FILE $FILES
+tar -czvf "$ARCHIVE_FILE" $FILES
 
 if [ $? -eq 0 ];then
    echo "Archivel is succes , deleting the files"
