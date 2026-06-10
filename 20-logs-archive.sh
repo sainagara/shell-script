@@ -21,7 +21,7 @@ if [ ! -d $DEST_DIR ]; then
 fi
 
 echo "Scanning for files older than 14 days"
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+FILES=$(find "$SOURCE_DIR" -name "*.log" -type f -mtime +$DAYS)
 
 if [ -z $FILES ]; then
    echo "No Files exists Older than 14 days"
@@ -29,7 +29,8 @@ if [ -z $FILES ]; then
 fi
 
 TIME_STAMP=$(date "+%Y-%m-%d %H:%M:%S")
-tar -czvf $DEST_DIR/logs-archive.$TIME_STAMP.tar.gz $FILES
+ARCHIVE_FILE="$DEST_DIR/logs-archive-$TIME_STAMP.tar.gz"
+tar -czvf $ARCHIVE_FILE $FILES
 
 if [ $? -eq 0 ];then
    echo "Archivel is succes , deleting the files"
