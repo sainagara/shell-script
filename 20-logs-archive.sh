@@ -15,8 +15,13 @@ if [ ! -d $SOURCE_DIR ] ; then
    exit 1
 fi
 
+if [ ! -d $DEST_DIR ]; then
+   echo "Destination directory does not exist"
+   exit 1
+fi
+
 echo "Scanning for files older than 14 days"
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mdays +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
 if [ -z $FILES ]
    echo "No Files exists Older than 14 days"
