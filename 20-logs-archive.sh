@@ -23,7 +23,7 @@ fi
 echo "Scanning for files older than 14 days"
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
-if [ -z $FILES ]
+if [ -z $FILES ]; then
    echo "No Files exists Older than 14 days"
    exit 0
 fi
@@ -39,7 +39,7 @@ if [ $? -eq 0 ];then
 	rm -f file
 	echo "$file deleted succesfully"
 
-   done >>> $FILES
+   done <<< $FILES
 
 else
   echo "[ERROR] Archoval is Failed"
