@@ -28,7 +28,7 @@ if [ -z "$FILES" ]; then
    exit 0
 fi
 
-TIME_STAMP=$(date "+%Y-%m-%d_%H:%M:%S")
+TIME_STAMP=$(date "+%Y-%m-%d_%H-%M-%S")
 ARCHIVE_FILE="$DEST_DIR/logs-archive-$TIME_STAMP.tar.gz"
 tar -czvf "$ARCHIVE_FILE" $FILES
 
