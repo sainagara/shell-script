@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DAYS=$(2:-14)
+DAYS=${2:-14}
 SOURCE_DIR=$1
 
 
