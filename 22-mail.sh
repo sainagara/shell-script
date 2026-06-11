@@ -1,4 +1,4 @@
-#!!/bin/bash
+#!/bin/bash
 
 TO_TEAM=$1
 ALERT_TYPE=$2
@@ -9,13 +9,13 @@ SUBJECT=$6
 
 FINAL_MESSAGE=$(echo "$MESSAGE" | sed -e "s/[&/]/\\&/g")
 
-FINAL_CONTEXT=$(sed -e "s/TO_TEAM/$TO_TEAM" -e "s/ALERT_TTYPE/$ALERT_TTYPE" -e "s/SERVER_IP/$SERVER_IP" \
-    -e "s/MESSAGE/$FINAL_MESSAGE" -e "s/SUBJECT/$SUBJECT" template.html)
+FINAL_CONTEXT=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TTYPE/$ALERT_TYPE/g" -e "s/SERVER_IP/$SERVER_IP/g" \
+    -e "s/MESSAGE/$FINAL_MESSAGE/g" -e "s/SUBJECT/$SUBJECT/g" template.html)
 
 {
 	echo "T0: $TO_ADDRESS"
 	echo "Subject: $SUBJECT"
-	echo "Content-type: text/html"
+	echo "Content-Type: text/html"
 	echo ""
 	echo "$FINAL_CONTEXT"
 
