@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -ht | grep -v filesystem)
+DISK_USAGE=$(df -hT | grep -v filesystem)
 THRESHHOLD=10
 SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/)
 
