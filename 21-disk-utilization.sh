@@ -7,10 +7,10 @@ SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/)
 
 while IFS= read -r line
 do 
-     USAGE=$(echo line | awk '{print $6}' | cut -d "%" f1)
-     PARTION=$(echo line | awk '{print $7}')
+     USAGE=$(echo $line | awk '{print $6}' | cut -d "%" f1)
+     PARTION=$(echo $line | awk '{print $7}')
  
-	if [ $USAGE -ge $THRESHHOLD ];then
+	if [ "$USAGE" -ge "$THRESHHOLD" ];then
 
 		MESSAGE+="High Disck Usage on $PARTION: $USAGE <br>"
 	fi
