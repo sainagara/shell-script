@@ -1,14 +1,14 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT | grep -v filesystem)
+DISK_USAGE=$(df -hT | grep -v Filesystem)
 THRESHHOLD=10
-SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/)
+SERVER_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 
 
 while IFS= read -r line
 do 
-     USAGE=$(echo $line | awk '{print $6}' | cut -d "%" f1)
-     PARTION=$(echo $line | awk '{print $7}')
+     USAGE=$(echo "$line" | awk '{print $6}' | cut -d "%" -f1)
+     PARTION=$(echo "$line" | awk '{print $7}')
  
 	if [ "$USAGE" -ge "$THRESHHOLD" ];then
 
