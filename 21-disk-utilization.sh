@@ -12,7 +12,8 @@ do
  
 	if [ "$USAGE" -ge "$THRESHHOLD" ];then
 
-		MESSAGE+="High Disck Usage on $PARTION: $USAGE <br>"
+		MESSAGE+="High Disk Usage on $PARTION: $USAGE <br>"
+		echo "$MESSAGE"
 	fi
 
 done <<< "$DISK_USAGE"

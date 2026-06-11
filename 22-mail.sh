@@ -9,11 +9,11 @@ SUBJECT=$6
 
 FINAL_MESSAGE=$(echo "$MESSAGE" | sed -e "s/[&/]/\\&/g")
 
-FINAL_CONTEXT=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TTYPE/$ALERT_TYPE/g" -e "s/SERVER_IP/$SERVER_IP/g" \
+FINAL_CONTEXT=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/SERVER_IP/$SERVER_IP/g" \
     -e "s/MESSAGE/$FINAL_MESSAGE/g" -e "s/SUBJECT/$SUBJECT/g" template.html)
 
 {
-	echo "T0: $TO_ADDRESS"
+	echo "To: $TO_ADDRESS"
 	echo "Subject: $SUBJECT"
 	echo "Content-Type: text/html"
 	echo ""
