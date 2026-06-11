@@ -10,7 +10,7 @@ do
      USAGE=$(echo line | awk '{print $6}' | cut -d "%" f1)
      PARTION=$(echo line | awk '{print $7}')
  
-	if [ "$USAGE" -ge "$THRESHHOLD" ];then
+	if [ $USAGE -ge $THRESHHOLD ];then
 
 		MESSAGE+="High Disck Usage on $PARTION: $USAGE <br>"
 	fi
